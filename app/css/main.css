@@ -87,12 +87,14 @@ body {
 }
 
 .article__icon {
-  background: url(../../images/drawers.jpg);
-  height: 40%;
+  background: url(../../images/drawers.jpg) no-repeat center/cover;
+  width: 100%;
+  min-height: 21em;
 }
 @media (min-width: 75rem) {
   .article__icon {
     height: 100%;
+    border-radius: 1rem 0 0 1rem;
   }
 }
 
@@ -101,6 +103,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem 0;
+  justify-content: center;
 }
 
 .article__container > * {
