@@ -1,0 +1,184 @@
+@import 'reset.scss';
+@import 'colors.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+body {
+  font-size: 0.8125rem;
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background: $LightGrayishBlue;
+  margin: 1rem;
+}
+
+.article__card {
+  display: grid;
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+  font-family: 'Manrope', sans-serif;
+  max-width: 31.25rem;
+  min-width: 22rem;
+
+  @media (min-width: 75rem) {
+    grid-template-columns: 40% 60%;
+    font-size: 150%;
+    max-width: 60rem;
+    overflow: visible;
+  }
+}
+
+.article__icon {
+  background: url(../../images/drawers.jpg);
+  height: 40%;
+  @media (min-width: 75rem) {
+    height: 100%;
+  }
+}
+
+.article__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.article__container > * {
+  padding: 0 2rem;
+}
+
+.article__title {
+  padding: 0 2rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+  color: $VeryDarkGrayishBlue;
+}
+
+.article__description {
+  color: $DesaturatedDarkBlue;
+  font-weight: 500;
+  line-height: 1.7rem;
+  font-size: 1rem;
+}
+
+.author__container {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.author__name {
+  color: $VeryDarkGrayishBlue;
+  font-weight: 700;
+}
+
+.article__date {
+  color: $GrayishBlue;
+  font-size: 1rem;
+}
+
+.author__avatar {
+  background: url('../../images/avatar-michelle.jpg');
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.share__button {
+  cursor: pointer;
+  margin-left: auto;
+  width: 40px;
+  position: relative;
+  height: 40px;
+  z-index: 100;
+  background: url('/images/icon-share.svg') no-repeat center;
+  border: 1px solid transparent;
+  background-color: $LightGrayishBlue;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-right: 2rem;
+
+  &:hover,
+  &:active {
+    background: url('/images/icon-share-active.svg') no-repeat center;
+    background-color: $DesaturatedDarkBlue;
+  }
+}
+
+.article__footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.share__container {
+  background-color: $VeryDarkGrayishBlue;
+  gap: 1.25rem;
+  display: flex;
+  padding: 2.25rem;
+  margin-top: 1rem;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.25s ease;
+  transform: translateY(100%);
+  visibility: hidden;
+
+  @media (min-width: 75rem) {
+    margin: 0;
+    padding: 0.75rem 2rem;
+    top: -90%;
+    right: -60px;
+    width: inherit;
+    z-index: 10;
+    transform: translate(-50%, 0);
+    border-radius: 0.5rem;
+    visibility: hidden;
+    transform-origin: bottom;
+    scale: 0;
+
+    &:after {
+      content: '';
+      width: 50px;
+      height: 20px;
+      position: absolute;
+      top: 20px;
+      z-index: -1;
+      left: 40%;
+      background-color: $VeryDarkGrayishBlue;
+      rotate: 45deg;
+    }
+  }
+
+  &.active {
+    transform: translateY(0);
+    visibility: visible;
+
+    @media (min-width: 75rem) {
+      scale: 1;
+      visibility: visible;
+    }
+  }
+
+  & > *:hover {
+    filter: invert(1);
+    cursor: pointer;
+  }
+
+  button {
+    all: unset;
+  }
+}
+
+.share__text {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  color: $GrayishBlue;
+}

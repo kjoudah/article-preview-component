@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="./app/css/main.css" />
+    <script defer src="./app/js/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <article class="article__card">
+        <div class="article__icon">
+          <!-- <img src="./images/drawers.jpg" alt="Drawers image" /> -->
+        </div>
+        <div class="article__container">
+          <h2 class="article__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p class="article__description">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <div class="article__footer">
+            <div class="author__container">
+              <img
+                class="author__avatar"
+                src="./images/avatar-michelle.jpg"
+                alt="Michelle's avatar"
+              />
+              <div class="author__info__container">
+                <h3 class="author__name">Michelle Appleton</h3>
+                <p class="article__date">28 Jun 2020</p>
+              </div>
+            </div>
+
+            <div class="share__container">
+              <span class="share__text">share</span>
+              <button>
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="Facebook"
+                  class="social__media__icon"
+                />
+              </button>
+              <button>
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="Twitter"
+                  class="social__media__icon"
+                />
+              </button>
+              <button>
+                <img
+                  src="./images/icon-pinterest.svg"
+                  alt="Pinterest"
+                  class="social__media__icon"
+                />
+              </button>
+            </div>
+            <button class="share__button"></button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
